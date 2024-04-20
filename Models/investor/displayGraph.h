@@ -10,7 +10,6 @@ float displayGraphAndGetPrice(string companyName , string exchange){
     system("python3 ../stockDataWork/plotData.py");
     
     float currentPrice = getRealTimePrice(companyName, exchange);
-    cout << "This is the current Price = " << currentPrice << endl;
 
     return currentPrice;
 }

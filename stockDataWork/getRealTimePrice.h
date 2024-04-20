@@ -24,7 +24,6 @@ float getRealTimePrice(string ticker, string exchange) {
     pclose(pipe);
 
     float price = std::stof(result);
-    // std::cout << "Real-time price of " << ticker << " on " << exchange << " is: " << price << std::endl;
 
     return price;
 }

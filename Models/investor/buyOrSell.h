@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "1_Investor.h"
-void showOptions(Investor &investor , string companyName , float currentPrice , int brokerFlag , int commissionRate){
+void buyOrSell(Investor &investor , string companyName , float currentPrice , int brokerFlag , int commissionRate){
     unordered_map<string , PortfolioEntry>&portfolio = investor.getPortfolio();
 
     cout << "Company Name: " << companyName << endl;
@@ -22,7 +22,7 @@ void showOptions(Investor &investor , string companyName , float currentPrice , 
         if (investor.getBalance() >= totalPrice) {
             investor.buyStock(companyName, quantity , currentPrice);
         } else {
-            cout << "Total price: " << totalPrice <<endl <<  ", Balance: " << investor.getBalance() << endl;
+            cout << "Total price: " << totalPrice << "$" <<endl <<  "Balance: " << investor.getBalance()<< "$" << endl;
             cout << endl << "Insufficient balance" << endl;
         }
     }
