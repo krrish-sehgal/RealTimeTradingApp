@@ -5,7 +5,7 @@
 using namespace std;
 
 
-vector<string>companies ={"AAPL", "TSLA", "MSFT", "AMZN", "META", "JNJ", "ORCL", "TM", "NFLX", "DLTR", "ADBE", "INTC"};
+vector<string>companies ={"AAPL", "TSLA", "MSFT", "AMZN", "META", "JNJ", "ORCL", "TM", "NFLX", "DLTR", "ADBE", "INTC","TATACHEM.BSE"};
 int totalCompanies = companies.size();
 
 #include "displayGraph.h"
@@ -90,6 +90,10 @@ void displayOptions(Investor &investor , int brokerFlag , int commissionRate) {
             }
             else if(serialNumber==12){
                 currentPrice = displayGraphAndGetPrice("INTC","NASDAQ");
+                buyOrSell(investor,companyName,currentPrice,brokerFlag,commissionRate);
+            }
+            else if(serialNumber==13){
+                currentPrice = displayGraphAndGetPrice("TATACHEM","NSE");
                 buyOrSell(investor,companyName,currentPrice,brokerFlag,commissionRate);
             }
             

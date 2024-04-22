@@ -16,7 +16,9 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::stri
 
 int makeCSV(string ticker,string exchange ) {
     // URL of the API endpoint
-    const std::string apiUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol="+ticker+"&interval=5min&apikey=1XNW0RHFNEAC0ZUA&datatype=csv";
+    std::string apiUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol="+ticker+"&interval=5min&apikey=RCJ9B0SWPD3OSGS6&datatype=csv";
+    if(exchange=="NSE")apiUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+ticker+".BSE&outputsize=compact&apikey=RCJ9B0SWPD3OSGS6&datatype=csv";
+
 
     // Path to the SSL/TLS certificate bundle
     const std::string certPath = "/path/to/cacert.pem"; // Update this with the path to your certificate bundle

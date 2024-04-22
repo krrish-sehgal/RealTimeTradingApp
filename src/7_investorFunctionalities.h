@@ -14,7 +14,7 @@ void investorFunctionalities(Investor&obj){
 
     int choice;
     while(true){
-        cout << "\n\n1.display options\n2.Display Portfolio\n3.Display UserInfo\n4.Add Balance\n5.Exit\n";
+        cout << "\n\n1.Display stock options\n2.Display Portfolio\n3.Display UserInfo\n4.Add Balance\n5.Exit\n";
         
         cin >> choice;
         if(choice==1){
